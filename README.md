@@ -2,7 +2,7 @@
 
 **Portfolio Site: https://ahnafarnab.github.io/**  
 
-This repository hosts his personal academic-portfolio website built using static HTML/CSS (via the Antigravity template) and deployed on GitHub Pages. It presents his research, methods, achievements, and creative work — all in one place.
+This repository hosts his personal academic-portfolio website built using static HTML/CSS and deployed on GitHub Pages. It presents his research, methods, achievements, and creative work — all in one place.
 
 ---
 
