@@ -8,7 +8,7 @@ This repository hosts my personal academic-portfolio website built using static 
 
 ## 🧑‍🎓 About Me
 
-I am a computational political scientist combining agent-based modeling, network analysis, and survey methods to study ideological polarization, policy influence, and political dynamics in South Asia, with a case study focus on Bangladesh. My work blends rigorous empirical methods and computational modeling with public-facing scholarship and policy relevance.
+I am a computational political researcher combining agent-based modeling, network analysis, and survey methods to study ideological polarization, policy influence, and political dynamics in South Asia, with a case study focus on Bangladesh. My work blends rigorous empirical methods and computational modeling with public-facing scholarship and policy relevance. I am also a metal musician and a former athlete!
 
 On this site you will find:
 
