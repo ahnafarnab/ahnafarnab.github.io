@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Dynamics Simulation | Ahnaf Tahmid</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Canvas for simulation background not needed here as we have a dedicated canvas -->
+    <!-- But we need navigation -->
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="logo">AHNAF TAHMID</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-trigger">Research</span>
+                    <div class="dropdown-content">
+                        <a href="research.html#publications">Selected Publications</a>
+                        <a href="research.html#working-papers">Working Papers</a>
+                        <a href="research.html#conferences">Conferences</a>
+                        <a href="methods.html">Methods & Tools</a>
+                        <a href="simulation.html">Live Simulation</a>
+                    </div>
+                </li>
+                <li><a href="policy.html">Policy</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-trigger">Professional</span>
+                    <div class="dropdown-content">
+                        <a href="professional.html#experience">Experience</a>
+                        <a href="professional.html#editorial">Editorial</a>
+                        <a href="professional.html#training">Training</a>
+                        <a href="professional.html#volunteering">Volunteering</a>
+                    </div>
+                </li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="creative.html">Creative</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="fade-in">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Computational Dynamics of Politics</h2>
+                <p class="section-subtitle">A Live Agent-Based Model of Ideological Polarization, Coalition Shifting,
+                    and Institutional Decay.</p>
+
+                <div class="sim-container">
+                    <div class="sim-canvas-wrapper">
+                        <canvas id="political-sim-canvas"></canvas>
+                        <div class="legend"
+                            style="position: absolute; bottom: 10px; left: 10px; color: rgba(255,255,255,0.7);">
+                            <div class="legend-item"><span class="legend-dot" style="background: #ef4444;"></span>
+                                Radical Left</div>
+                            <div class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span>
+                                Center-Left</div>
+                            <div class="legend-item"><span class="legend-dot" style="background: #94a3b8;"></span>
+                                Center</div>
+                            <div class="legend-item"><span class="legend-dot" style="background: #3b82f6;"></span>
+                                Nationalist</div>
+                            <div class="legend-item"><span class="legend-dot" style="background: #a855f7;"></span>
+                                Religious Right</div>
+                        </div>
+                    </div>
+
+                    <div class="sim-controls">
+                        <div class="sim-panel">
+                            <h3>System Metrics</h3>
+
+                            <div class="metric-row">
+                                <span>Polarization Index</span>
+                                <span class="metric-val" id="sim-polarization-val">0.00</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="sim-polarization"
+                                    style="width: 0%; background: #ef4444;"></div>
+                            </div>
+
+                            <div class="metric-row" style="margin-top: 1rem;">
+                                <span>Judicial Independence</span>
+                                <span class="metric-val" id="sim-judiciary-val">100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="sim-judiciary" style="width: 100%; background: #22c55e;">
+                                </div>
+                            </div>
+
+                            <div class="metric-row" style="margin-top: 1rem;">
+                                <span>Bills Passed</span>
+                                <span class="metric-val" id="sim-legislature">0</span>
+                            </div>
+
+                            <div class="metric-row" style="margin-top: 1rem;">
+                                <span>Political Gini Index</span>
+                                <span class="metric-val" id="sim-gini-val">0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="sim-panel">
+                            <h3>Parameters</h3>
+
+                            <div class="slider-group">
+                                <label>Affective Intensity <span style="float:right;" id="val-affect">0.5</span></label>
+                                <input type="range" id="sim-slider-affect" min="0" max="1" step="0.1" value="0.5">
+                            </div>
+
+                            <div class="slider-group">
+                                <label>Party Opportunism <span style="float:right;"
+                                        id="val-opportunism">0.3</span></label>
+                                <input type="range" id="sim-slider-opportunism" min="0" max="1" step="0.1" value="0.3">
+                            </div>
+
+                            <div class="slider-group">
+                                <label>Stochastic Noise <span style="float:right;" id="val-noise">0.005</span></label>
+                                <input type="range" id="sim-slider-noise" min="0" max="0.02" step="0.001" value="0.005">
+                            </div>
+
+                            <div class="slider-group">
+                                <label>Media Events <span style="float:right;" id="val-media">0.005</span></label>
+                                <input type="range" id="sim-slider-media" min="0" max="0.02" step="0.001" value="0.005">
+                            </div>
+
+                            <div class="slider-group">
+                                <label>Radicalization Scale <span style="float:right;"
+                                        id="val-radical">1.0</span></label>
+                                <input type="range" id="sim-slider-radical" min="0.5" max="2" step="0.1" value="1.0">
+                            </div>
+
+                            <div class="slider-group">
+                                <label>Sim Speed <span style="float:right;" id="val-speed">1</span></label>
+                                <input type="range" id="sim-slider-speed" min="1" max="10" step="1" value="1">
+                            </div>
+                        </div>
+
+                        <div class="sim-panel">
+                            <h3>Actions</h3>
+                            <div
+                                style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <button class="sim-btn" id="btn-pause">Pause</button>
+                                <button class="sim-btn" id="btn-export">Export Data</button>
+                            </div>
+                            <button class="sim-btn" id="btn-coalition">Force Coalition</button>
+                            <button class="sim-btn danger" id="btn-polarize">Trigger Radicalization</button>
+                            <button class="sim-btn" id="btn-reset">Reset System</button>
+                        </div>
+
+                        <div class="log-container" id="sim-log">
+                            <div class="log-entry">System initialized.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>About this Model</h3>
+                    <p>
+                        This simulation demonstrates the <strong>complex adaptive nature</strong> of the Bangladeshi
+                        political landscape.
+                        Unlike traditional linear models, it treats political parties as <em>dynamic attractors</em> and
+                        voters as
+                        <em>responsive agents</em> subject to bounded rationality and affective polarization.
+                    </p>
+                    <p>
+                        <strong>Key Dynamics:</strong>
+                    <ul
+                        style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.5rem; color: var(--text-muted);">
+                        <li><strong>Dubious Ideologies:</strong> Parties are not static; they shift positions based on
+                            opportunism ("Party Opportunism" parameter), often forming unlikely coalitions that confuse
+                            the electorate.</li>
+                        <li><strong>Affective Polarization:</strong> Agents do not just seek their ideological home;
+                            they actively repel from opposing extremes, creating a "hollow center."</li>
+                        <li><strong>Institutional Decay:</strong> As polarization increases, the system tracks the
+                            erosion of <strong>Judicial Independence</strong> and legislative gridlock, mirroring
+                            real-world governance challenges.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer fade-in">
+        <div class="container">
+            <p>&copy; 2024 Ahnaf Tahmid. Designed for Academic Impact.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script> <!-- Universal scripts (void mode, mobile menu) -->
+    <script src="assets/js/abm-simulation.js"></script>
+</body>
+
+</html>

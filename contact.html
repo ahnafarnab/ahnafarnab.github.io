@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ahnaf Tahmid</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <canvas id="network-canvas"></canvas>
+
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="logo">AHNAF TAHMID</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-trigger">Research</span>
+                    <div class="dropdown-content">
+                        <a href="research.html#publications">Selected Publications</a>
+                        <a href="research.html#working-papers">Working Papers</a>
+                        <a href="research.html#conferences">Conferences</a>
+                        <a href="methods.html">Methods & Tools</a>
+                    </div>
+                </li>
+                <li><a href="policy.html">Policy</a></li>
+                <li class="dropdown">
+                    <span class="dropdown-trigger">Professional</span>
+                    <div class="dropdown-content">
+                        <a href="professional.html#experience">Experience</a>
+                        <a href="professional.html#editorial">Editorial</a>
+                        <a href="professional.html#training">Training</a>
+                        <a href="professional.html#volunteering">Volunteering</a>
+                    </div>
+                </li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="creative.html">Creative</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="fade-in">
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Interested in collaboration, PhD opportunities, or discussing computational
+                    social science? Let's connect.</p>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Direct Contact</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:ahnaf.analyst@gmail.com">ahnaf.analyst@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/ahnafarnab/" target="_blank">LinkedIn Profile</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/ahnafarnab" target="_blank">GitHub Profile</a>
+                        </div>
+
+                        <div class="existential-quote">
+                            <p><em>"In the chaos of complex systems, we find the patterns that define us."</em></p>
+                            <p style="text-align: right; margin-top: 0.5rem; font-size: 0.85rem;">— A.T.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="_replyto" required
+                                    placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required
+                                    placeholder="What's this about?">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" required
+                                    placeholder="Your message..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+
+                        <p class="form-note">
+                            <i class="fas fa-info-circle"></i>
+                            This form uses <a href="https://formspree.io" target="_blank">Formspree</a> for secure email
+                            delivery.
+                            To activate: Sign up at formspree.io (free), create a form, and replace
+                            <code>YOUR_FORM_ID</code> in the form action above.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer fade-in">
+        <div class="container">
+            <p>&copy; 2024 Ahnaf Tahmid. Designed for Academic Impact.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/network-bg.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
