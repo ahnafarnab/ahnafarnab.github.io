@@ -113,14 +113,41 @@ document.addEventListener('DOMContentLoaded', () => {
             : '<i class="fas fa-bars"></i>';
     });
 
+    // --- Mobile/Global Dropdown Logic ---
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        if (trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent bubbling to document
+
+                const wasActive = dropdown.classList.contains('active');
+
+                // Close all dropdowns
+                dropdowns.forEach(d => d.classList.remove('active'));
+
+                // Toggle current if it wasn't active
+                if (!wasActive) {
+                    dropdown.classList.add('active');
+                }
+            });
+        }
+    });
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
+        // Close Mobile Menu
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target) && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         }
+
+        // Close Dropdowns (Desktop & Mobile)
+        dropdowns.forEach(d => d.classList.remove('active'));
     });
 });
+
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

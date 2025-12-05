@@ -203,6 +203,17 @@ h6 {
     animation: fadeIn 0.2s ease-out;
 }
 
+/* Fix for hover gap */
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background: transparent;
+}
+
 .dropdown-content a {
     color: var(--text-main);
     padding: 0.8rem 1rem;
@@ -221,7 +232,8 @@ h6 {
 }
 
 .dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+.dropdown:focus-within .dropdown-content,
+.dropdown.active .dropdown-content {
     display: block;
 }
 
@@ -1119,6 +1131,11 @@ body.void-mode .impact-card h3 {
         background: transparent;
         padding-left: 1rem;
         margin-top: 0.5rem;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+        animation: fadeIn 0.3s ease-out;
     }
 
     .dropdown-content a {
