@@ -1,22 +1,22 @@
-# Ahnaf Tahmid Arnab — Personal Portfolio & Academic Website
+# Greetings from Ahnaf Tahmid Arnab!
 
-**My home on the web: https://ahnafarnab.github.io/**  
+**Portfolio Site: https://ahnafarnab.github.io/**  
 
-This repository hosts my personal academic-portfolio website built using static HTML/CSS (via the Antigravity template) and deployed on GitHub Pages. It presents my research, methods, publications, CV, and creative work — all in one place.
+This repository hosts his personal academic-portfolio website built using static HTML/CSS (via the Antigravity template) and deployed on GitHub Pages. It presents his research, methods, achievements, and creative work — all in one place.
 
 ---
 
-## 🧑‍🎓 About Me
+## 🧑‍🎓 About Ahnaf 🇧🇩
 
-I am a computational political researcher combining agent-based modeling, network analysis, and survey methods to study ideological polarization, policy influence, and political dynamics in South Asia, with a case study focus on Bangladesh. My work blends rigorous empirical methods and computational modeling with public-facing scholarship and policy relevance. I am also a metal musician and a former athlete!
+Ahnaf is a Bangladeshi computational political researcher who uses agent-based modeling, network analysis, and survey methods to study ideological polarization, policy influence, and political dynamics in South Asia, with a case-study focus on Bangladesh. His work blends rigorous empirical methods and computational modeling with public-facing scholarship and policy relevance. He has an MSS and a BSS degree in Government and Politics from Jahangirnagar University. He is also a metal musician and a former athlete!
 
 On this site you will find:
 
-- My research projects and publications  
+- His research projects and publications  
 - Reproducible code / simulation demos (or links to them)  
-- My academic CV & research statement  
+- His academic CV & research statement  
 - Creative and public-engagement activities  
-- Contact information and links to social / academic profiles
+- Contact information and links to his social / academic profiles
 
 ---
 
